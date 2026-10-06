@@ -1,134 +1,32 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f5f6fa;
-}
-
-.main {
-    min-height: 100vh;
-    padding: 14px 16px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.header {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    padding: 16px;
-    border: 1px solid #e1e1e1;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgb(0 0 0 / 8%);
-}
+/* Small overrides on top of Bootstrap 5 */
 
 .thumbnail {
-    width: 125px;
-    height: 125px;
-    margin-right: 16px;
-    border-radius: 8px;
+    width: 140px;
+    height: 140px;
     object-fit: cover;
 }
 
-.identity {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-width: 180px;
-    margin-right: 28px;
+/* Divider between the identity block and the details list on large screens */
+@media (min-width: 992px) {
+    .details {
+        border-left: 1px solid var(--bs-border-color);
+        padding-left: 1.5rem;
+    }
 }
 
-.name {
-    margin: 0;
+/* Divider above details when stacked on small/medium screens */
+@media (max-width: 991.98px) {
+    .details {
+        border-top: 1px solid var(--bs-border-color);
+        padding-top: 1rem;
+    }
+}
+
+.profile-form .form-label {
     font-weight: 600;
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 0.875rem;
 }
 
-.job {
-    margin: 0;
-    font-weight: 400;
-    font-size: 16px;
-    margin-bottom: 24px;
-}
-
-.cta-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-}
-
-.cta-button {
-    height: 25px;
-    padding: 0 14px;
-    border-radius: 2px;
-    font-size: 10px;
-    cursor: pointer;
-}
-
-.contact-button {
-    color: white;
-    background-color: #0000e8;
-    border: 1px solid #0000b8;
-    box-shadow: 0 1px 4px rgb(0 0 180 / 55%);
-}
-
-.resume-button {
-    color: #5d805c;
-    background-color: white;
-    border: 1px solid #abc0a8;
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-    padding-left: 16px;
-    border-left: 1px solid #eeeeee;
-    font-size: 10px;
-}
-
-.detail-row {
-    display: flex;
-    min-width: 250px;
-}
-
-.detail-row strong {
-    width: 72px;
-    font-size: 10px;
-}
-
-.detail-row span {
-    color: #666666;
-}
-
-.profile-form {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    background-color: white;
-    padding: 16px;
-}
-
-.profile-form label {
-    font-size: 10px;
-    font-weight: 600
-}
-
-.profile-form input {
-    width: 100%;
-    height: 20px;
-    margin-bottom: 7px;
-    border: 1px solid #d5d5d5;
-    background-color: white;
-}
-
-.submit-button {
-    height: 21px;
-    color: white;
-    background-color: #277d13;
-    border: 1px solid #226b11;
-    border-radius: 2px;
-    font-size: 9px;
+html {
+    scroll-behavior: smooth;
 }
